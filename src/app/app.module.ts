@@ -23,6 +23,7 @@ import { LoginComponent } from './login/login.component';
 import {MatCardModule} from '@angular/material/card';
 import { FooterComponent } from './footer/footer.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MyUpperCasePipe } from './pipes/my-upper-case.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { ProfileComponent } from './profile/profile.component';
     HeaderComponent,
     LoginComponent,
     FooterComponent,
-    ProfileComponent
+    ProfileComponent,
+    MyUpperCasePipe
   ],
   imports: [
     BrowserModule,
