@@ -1,0 +1,21 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .humburger{
+    background: transparent;
+    height: 50px;
+    width: 50px;
+    border: none;
+  }
+  .humburger span{
+    height: 2px;
+    background: #fff;
+    width: 25px;
+    display: block;
+    margin: 5px;
+    padding: 1.5px;
+  }
+  .btn{
+    font-family: 'Roboto';
+  }

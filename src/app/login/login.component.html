@@ -1,0 +1,114 @@
+<div class="row d-flex justify-content-center">
+    <!--Grid column-->
+    <div class="col-md-6">
+        <mat-card>
+            <!-- login form -->
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="loginFormFlag">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" id="form2Example1" class="form-control" formControlName="email" />
+                    <label class="form-label" for="form2Example1">Email address</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="form2Example2" class="form-control" formControlName="password" />
+                    <label class="form-label" for="form2Example2">Password</label>
+                </div>
+
+                <!-- 2 column grid layout for inline styling -->
+                <div class="row mb-4">
+                    <div class="col d-flex justify-content-center">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked
+                                formControlName="rememberMe" />
+                            <label class="form-check-label" for="form2Example31"> Remember me </label>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Submit button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+                </div>
+                <!-- Register buttons -->
+                <div class="text-center" style="color:#fff">
+                    <p style="color:#fff">Not a member? <span (click)="openRegisterForm()" class="link1" style="color:#fff">Register</span></p>
+                    <p>or sign up with:</p>
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-google"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+            </form>
+
+            <!-- sign up form -->
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmitSignUp()" *ngIf="loginFormFlag?false:true">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" id="nameSingUp" class="form-control" formControlName="name" placeholder="Enter your name"/>
+                    <label class="form-label" for="form2Example1">Full Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="email" id="emailSignUp" class="form-control" formControlName="email" placeholder="Enter your email" />
+                    <label class="form-label" for="form2Example1">Email address</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="form2Example211" class="form-control" formControlName="password" placeholder="Enter your password "/>
+                    <label class="form-label" for="form2Example2">Password</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="password" id="form2Example21" class="form-control" formControlName="rePassword" placeholder="Enter your password again"/>
+                    <label class="form-label" for="form2Example2">Re enter password</label>
+                </div>
+
+
+
+                <!-- Submit button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign Up</button>
+                    <span style="width: 10px;display: inline-block;"></span>
+                    <button type="button" class="btn btn-primary btn-block mb-4" (click)="gotoSignIn()">Sign in</button>
+                </div>
+
+                <!-- Register buttons -->
+                <div class="text-center">
+
+                    <p>or sign up with:</p>
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-google"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+    <!--Grid column-->
+</div>
